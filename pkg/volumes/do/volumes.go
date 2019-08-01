@@ -17,16 +17,16 @@ limitations under the License.
 package do
 
 import (
-	"fmt"
-	"os"
-	"path/filepath"
-	"strings"
-	"sync"
-	"time"
+	//"fmt"
+	// "os"
+	// "path/filepath"
+	// "strings"
+	// "sync"
+	// "time"
 
-	"github.com/digitalocean/godo"
+	// "github.com/digitalocean/godo"
 
-	"github.com/golang/glog"
+	// "github.com/golang/glog"
 
 	"kope.io/etcd-manager/pkg/volumes"
 )
@@ -38,51 +38,20 @@ type DOVolumes struct {
 
 var _ volumes.Volumes = &DOVolumes{}
 
-// NewDOVolumes returns a new aws volume provider
-func NewDOVolumes(clusterName string, volumeTags []string, nameTag string) (*DOVolumes, error) {
-
-	return a, nil
-}
-
-func (a *DOVolumes) describeInstance() (*ec2.Instance, error) {
-
-	var instances []*ec2.Instance
-
-
-	return instances[0], nil
-}
-
-
-func (a *DOVolumes) describeVolumes(request *ec2.DescribeVolumesInput) ([]*volumes.Volume, error) {
-	var found []*volumes.Volume
-	
-	return found, nil
-}
-
 func (a *DOVolumes) FindVolumes() ([]*volumes.Volume, error) {
-	return a.findVolumes(true)
-}
-
-func (a *DOVolumes) findVolumes(filterByAZ bool) ([]*volumes.Volume, error) {
-	return nil
+	return nil, nil
 }
 
 // FindMountedVolume implements Volumes::FindMountedVolume
 func (a *DOVolumes) FindMountedVolume(volume *volumes.Volume) (string, error) {
-
 	return "", nil
-}
-
-// assignDevice picks a hopefully unused device and reserves it for the volume attachment
-func (a *DOVolumes) assignDevice(volumeID string) (string, error) {
-	return "", fmt.Errorf("All devices in use")
 }
 
 // AttachVolume attaches the specified volume to this instance, returning the mountpoint & nil if successful
 func (a *DOVolumes) AttachVolume(volume *volumes.Volume) error {
-
+	return nil
 }
 
 func (a *DOVolumes) MyIP() (string, error) {
-	return nil, nil
+	return "", nil
 }

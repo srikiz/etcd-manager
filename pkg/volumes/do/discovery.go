@@ -17,14 +17,14 @@ limitations under the License.
 package do
 
 import (
-	"fmt"
+	//"fmt"
 
-	"github.com/golang/glog"
+	// "github.com/golang/glog"
 
-	"github.com/digitalocean/godo"
+	// "github.com/digitalocean/godo"
 
-	"kope.io/etcd-manager/pkg/privateapi/discovery"
-	"kope.io/etcd-manager/pkg/volumes"
+	 "kope.io/etcd-manager/pkg/privateapi/discovery"
+	// "kope.io/etcd-manager/pkg/volumes"
 )
 
 // DO Volumes also allows us to discover our peer nodes
